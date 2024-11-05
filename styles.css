@@ -1,0 +1,86 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* Style for the navbar */
+
+
+body {
+background-color: #282c34;
+}
+/* Navbar Style */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #222; /* Dark background */
+    padding: 1rem 2rem;
+    border-radius: 12px; /* Slightly rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Logo Style */
+.navbar h1 {
+    font-size: 2rem;
+    color: #f8f9fa; /* Light logo color */
+    margin: 0;
+    font-family: 'Arial', sans-serif; /* Clean and simple font */
+}
+
+/* Navigation List Style */
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+/* List Item Style */
+.navbar li {
+    position: relative; /* Needed for hover effects */
+}
+
+/* Link Styling */
+.navbar a {
+    color: #f8f9fa; /* Light color for links */
+    text-decoration: none;
+    padding: 10px 15px; /* Padding around links */
+    transition: color 0.3s, transform 0.3s; /* Smooth transition */
+}
+
+/* Link Hover Effect */
+.navbar a:hover {
+    color: #ffcc00; /* Change link color on hover */
+    transform: scale(1.1); /* Scale up slightly on hover */
+}
+
+/* Line under each link */
+.navbar li::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    height: 2px;
+    width: 0;
+    background-color: #ffcc00; /* Underline color */
+    transition: width 0.4s ease, left 0.4s ease; /* Smooth width and position change */
+}
+
+.navbar li:hover::after {
+    width: 100%; /* Full width on hover */
+    left: 0; /* Reset position */
+}
+
+/* Media Query for Responsiveness */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack items vertically */
+    }
+
+    .navbar ul {
+        flex-direction: column; /* Stack links vertically */
+        gap: 1rem; /* Space between links */
+    }
+}
